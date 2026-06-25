@@ -1,0 +1,11 @@
+@use "../partials/colors.scss" as c;
+
+.container {
+  height: 100dvh;
+  background-color: c.$primary;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

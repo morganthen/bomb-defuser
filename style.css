@@ -1,0 +1,94 @@
+.container {
+  height: 100dvh;
+  background-color: #3498db;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.word-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  padding: 5px;
+}
+.word-display__letter {
+  margin: 10px;
+}
+
+.game-over {
+  position: absolute;
+  inset: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.game-over__message {
+  text-transform: uppercase;
+}
+.game-over--show {
+  display: flex;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+.keyboard__row {
+  display: flex;
+  gap: 6px;
+}
+.keyboard__key {
+  width: 40px;
+  height: 45px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px solid #444;
+  border-radius: 6px;
+  background: #fff;
+  color: #333;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.keyboard__key:hover:not(:disabled) {
+  background: #ddd;
+}
+.keyboard__key:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.keyboard__key--correct {
+  background: #2ecc71;
+  color: #fff;
+  border-color: #27ae60;
+}
+.keyboard__key--wrong {
+  background: #e74c3c;
+  color: #fff;
+  border-color: #c0392b;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="./script.js" defer></script>
+    <title>Bomb Defuser</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <header class="header">
+          <h1 class="header__title">Bomb Defuser</h1>
+          <div class="header__status">
+              <p>Guesses Remaining: <span class="guesses-remaining"></span></p>
+              <p class="header__message"></p>
+        </div>
+            
+        </header>
+        <div class="word-display"></div>
+        <div class="keyboard">
+          <div class="keyboard__row">
+            <button class="keyboard__key" data-letter="q">Q</button>
+            <button class="keyboard__key" data-letter="w">W</button>
+            <button class="keyboard__key" data-letter="e">E</button>
+            <button class="keyboard__key" data-letter="r">R</button>
+            <button class="keyboard__key" data-letter="t">T</button>
+            <button class="keyboard__key" data-letter="y">Y</button>
+            <button class="keyboard__key" data-letter="u">U</button>
+            <button class="keyboard__key" data-letter="i">I</button>
+            <button class="keyboard__key" data-letter="o">O</button>
+            <button class="keyboard__key" data-letter="p">P</button>
+          </div>
+          <div class="keyboard__row">
+            <button class="keyboard__key" data-letter="a">A</button>
+            <button class="keyboard__key" data-letter="s">S</button>
+            <button class="keyboard__key" data-letter="d">D</button>
+            <button class="keyboard__key" data-letter="f">F</button>
+            <button class="keyboard__key" data-letter="g">G</button>
+            <button class="keyboard__key" data-letter="h">H</button>
+            <button class="keyboard__key" data-letter="j">J</button>
+            <button class="keyboard__key" data-letter="k">K</button>
+            <button class="keyboard__key" data-letter="l">L</button>
+          </div>
+          <div class="keyboard__row">
+            <button class="keyboard__key" data-letter="z">Z</button>
+            <button class="keyboard__key" data-letter="x">X</button>
+            <button class="keyboard__key" data-letter="c">C</button>
+            <button class="keyboard__key" data-letter="v">V</button>
+            <button class="keyboard__key" data-letter="b">B</button>
+            <button class="keyboard__key" data-letter="n">N</button>
+            <button class="keyboard__key" data-letter="m">M</button>
+          </div>
+        </div>
+        <div class="game-over">
+            <p class="game-over__message">WASTED</p>
+            <button class="resetBtn">Play Again</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

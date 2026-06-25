@@ -1,0 +1,12 @@
+@use "../partials/colors.scss" as c;
+
+.word-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  padding: 5px;
+  &__letter {
+    margin: 10px;
+  }
+}

@@ -1,0 +1,12 @@
+@use "./scss/components/container.scss";
+@use "./scss/components/word-display.scss";
+@use "./scss/components/game-over.scss";
+@use "./scss/components/keyboard.scss";
+@use "./scss/components/header.scss";
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
