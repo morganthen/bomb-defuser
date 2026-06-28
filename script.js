@@ -17,7 +17,8 @@ const winAudio = new Audio("assets/audio/defused.mp3");
 const clickAudio = new Audio("assets/audio/click_1.mp3");
 const errorAudio = new Audio("assets/audio/click_error.mp3");
 const initAudio = new Audio("assets/audio/init.mp3");
-const bgVideo = document.querySelector(".bg-video");
+const bgPreExplosion = document.querySelector("#bg-pre-explosion");
+const bgExplosion = document.querySelector("#bg-explosion");
 const keyboard = document.querySelector(".keyboard");
 const wordDisplay = document.querySelector(".word-display");
 const header = document.querySelector(".header");
@@ -50,10 +51,10 @@ function startTimer() {
       timerInterval = null;
       game.loseByTime();
       boomAudio.play();
-      bgVideo.querySelector("source").src = "assets/video/explosion.mp4";
-      bgVideo.loop = false;
-      bgVideo.load();
-      bgVideo.play();
+      bgPreExplosion.classList.add("bg-video--hidden");
+      bgExplosion.classList.remove("bg-video--hidden");
+      bgExplosion.currentTime = 0;
+      bgExplosion.play();
       render(game);
     }
   }, 1000);
@@ -96,16 +97,16 @@ function handleGuess(letter) {
     if (game.isLost) {
       timerAudio.currentTime = 0;
       boomAudio.play();
-      bgVideo.querySelector("source").src = "assets/video/explosion.mp4";
-      bgVideo.classList.add("noir--80");
+      bgPreExplosion.classList.add("bg-video--hidden");
+      bgExplosion.classList.remove("bg-video--hidden");
+      bgExplosion.classList.add("noir--80");
       keyboard.classList.add("noir");
       timerProgressBar.classList.add("noir");
       timer.classList.add("noir");
       wordDisplay.classList.add("noir");
       header.classList.add("noir");
-      bgVideo.loop = false;
-      bgVideo.load();
-      bgVideo.play();
+      bgExplosion.currentTime = 0;
+      bgExplosion.play();
     } else {
       timerAudio.currentTime = 0;
       winAudio.play();
@@ -133,16 +134,16 @@ resetBtn.addEventListener("click", () => {
   gameOverAnswer.textContent = targetWord;
   resetTimer();
   gameOver.classList.remove("game-over--show");
-  bgVideo.querySelector("source").src = "assets/video/pre-explosion.mp4";
-  bgVideo.classList.remove("noir--80");
+  bgExplosion.classList.add("bg-video--hidden");
+  bgExplosion.classList.remove("noir--80");
+  bgExplosion.pause();
+  bgPreExplosion.classList.remove("bg-video--hidden");
   keyboard.classList.remove("noir");
   timerProgressBar.classList.remove("noir");
   timer.classList.remove("noir");
   wordDisplay.classList.remove("noir");
   header.classList.remove("noir");
-  bgVideo.loop = true;
-  bgVideo.load();
-  bgVideo.play();
+  bgPreExplosion.play();
   render(game);
 });
 

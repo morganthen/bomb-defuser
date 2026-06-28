@@ -184,6 +184,11 @@
   filter: grayscale(30%);
 }
 
+.bg-video--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .crt-overlay {
   position: fixed;
   inset: 0;
