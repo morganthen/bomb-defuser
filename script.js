@@ -50,7 +50,7 @@ function startTimer() {
       timerInterval = null;
       game.loseByTime();
       boomAudio.play();
-      bgVideo.querySelector("source").src = "assets/video/explosion2.mp4";
+      bgVideo.querySelector("source").src = "assets/video/explosion.mp4";
       bgVideo.loop = false;
       bgVideo.load();
       bgVideo.play();
@@ -96,7 +96,7 @@ function handleGuess(letter) {
     if (game.isLost) {
       timerAudio.currentTime = 0;
       boomAudio.play();
-      bgVideo.querySelector("source").src = "assets/video/explosion2.mp4";
+      bgVideo.querySelector("source").src = "assets/video/explosion.mp4";
       bgVideo.classList.add("noir--80");
       keyboard.classList.add("noir");
       timerProgressBar.classList.add("noir");
@@ -151,6 +151,6 @@ gameOverAnswer.textContent = targetWord;
 render(game);
 
 //weird behaviour - ask alex
-initAudio.play().catch(() => {
-  document.addEventListener("click", () => initAudio.play(), { once: true });
-});
+// initAudio.play().catch(() => {
+//   document.addEventListener("click", () => initAudio.play(), { once: true });
+// });

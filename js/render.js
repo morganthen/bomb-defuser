@@ -5,9 +5,8 @@ export default function render(game) {
   const guessesRemaining = document.querySelector(".guesses-remaining");
   const headerMessage = document.querySelector(".header__message");
 
-  guessesRemaining.textContent = game.summary.guessesRemaining;
-  headerMessage.textContent =
-    game.summary.message === "WASTED" ? "BOMB DETONATED" : game.summary.message;
+  guessesRemaining.textContent = game.guessesRemaining;
+  headerMessage.textContent = game.message;
 
   wordDisplay.innerHTML = `${game.displayWord
     .map((el) => {
@@ -24,6 +23,7 @@ export default function render(game) {
       "is-success",
       "is-error",
     );
+
     key.disabled = false;
 
     if (game.correctGuesses.includes(letter)) {

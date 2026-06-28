@@ -6,6 +6,7 @@
   object-fit: cover;
   z-index: -1;
   pointer-events: none;
+  filter: grayscale(30%);
 }
 
 .crt-overlay {

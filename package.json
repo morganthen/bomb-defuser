@@ -1,0 +1,26 @@
+{
+  "name": "bomb-defusal",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/morganthen/bomb-defuser#readme",
+  "bugs": {
+    "url": "https://github.com/morganthen/bomb-defuser/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morganthen/bomb-defuser.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^8.0.1",
+    "@babel/preset-env": "^8.0.2",
+    "babel-jest": "^30.4.1",
+    "jest": "^30.4.2"
+  }
+}

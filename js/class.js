@@ -40,11 +40,12 @@ export class BombGame {
   }
 
   get wrongGuesses() {
-    //deriving wrong guesses and returns an array
+    //deriving wrong guesses and returns an array (filter always returns array)
     return this.guessedLetters.filter((l) => !this.word.includes(l));
   }
 
   get correctGuesses() {
+    //deriving right guesses and returns an array
     return this.guessedLetters.filter((l) => this.word.includes(l));
   }
 
@@ -56,28 +57,28 @@ export class BombGame {
     return this.correctGuesses.length === this.numberOfLettersToGuess;
   }
 
-  get summary() {
-    let details = {
-      lettersRemaining: `${this.numberOfLettersToGuess - this.correctGuesses.length}`,
-      guessesRemaining: `${this.maxGuesses - this.wrongGuesses.length}`,
-      message: "",
-    };
+  get lettersRemaining() {
+    return this.numberOfLettersToGuess - this.correctGuesses.length;
+  }
 
+  get guessesRemaining() {
+    return this.maxGuesses - this.wrongGuesses.length;
+  }
+
+  get message() {
     switch (this.status) {
       case "LOST":
-        details.message = this.timeUp ? "TIME'S UP" : "WASTED";
+        return this.timeUp ? "TIME'S UP" : "WASTED";
         break;
       case "WIN":
-        details.message = "BOMB SUCCESSFULLY DEFUSED";
+        return "BOMB SUCCESSFULLY DEFUSED";
         break;
       case "LIVE":
-        details.message = `BOMB IS LIVE`;
+        return `BOMB IS LIVE`;
         break;
       case "DORMANT":
-        details.message = `BOMB IS DORMANT`;
+        return `BOMB IS DORMANT`;
         break;
     }
-
-    return details;
   }
 }
