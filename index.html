@@ -1,62 +1,43 @@
 <!doctype html>
 <html lang="en">
-    <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-width,
+  initial-scale=1.0, user-scalable=no" />
     <script type="module" src="./script.js" defer></script>
     <title>Bomb Defuser</title>
   </head>
-  <body>
+  <body class="warehouse-bg">
+    <video autoplay loop muted playsinline class="bg-video">
+    <source src="assets/video/pre-explosion.mp4" type="video/mp4">
+  </video>
     <main>
-      <div class="container">
-        <header class="header">
-          <h1 class="header__title">Bomb Defuser</h1>
+      <div class="game-container">
+        <header class="header nes-container with-title is-centered is-rounded">
+          <p class="title">Bomb Defuser</p>
           <div class="header__status">
               <p>Guesses Remaining: <span class="guesses-remaining"></span></p>
               <p class="header__message"></p>
         </div>
-            
-        </header>
-        <div class="word-display"></div>
+        
+      </header>
+      <div class="timer">
+        <p>Time: <span class="timer__display">60</span>s</p>
+        <progress class="nes-progress is-warning timer__progress" value="100" max="100"></progress>
+      </div>
+        <div class="nes-container is-centered is-dark is-rounded word-display"></div>
         <div class="keyboard">
-          <div class="keyboard__row">
-            <button class="keyboard__key" data-letter="q">Q</button>
-            <button class="keyboard__key" data-letter="w">W</button>
-            <button class="keyboard__key" data-letter="e">E</button>
-            <button class="keyboard__key" data-letter="r">R</button>
-            <button class="keyboard__key" data-letter="t">T</button>
-            <button class="keyboard__key" data-letter="y">Y</button>
-            <button class="keyboard__key" data-letter="u">U</button>
-            <button class="keyboard__key" data-letter="i">I</button>
-            <button class="keyboard__key" data-letter="o">O</button>
-            <button class="keyboard__key" data-letter="p">P</button>
-          </div>
-          <div class="keyboard__row">
-            <button class="keyboard__key" data-letter="a">A</button>
-            <button class="keyboard__key" data-letter="s">S</button>
-            <button class="keyboard__key" data-letter="d">D</button>
-            <button class="keyboard__key" data-letter="f">F</button>
-            <button class="keyboard__key" data-letter="g">G</button>
-            <button class="keyboard__key" data-letter="h">H</button>
-            <button class="keyboard__key" data-letter="j">J</button>
-            <button class="keyboard__key" data-letter="k">K</button>
-            <button class="keyboard__key" data-letter="l">L</button>
-          </div>
-          <div class="keyboard__row">
-            <button class="keyboard__key" data-letter="z">Z</button>
-            <button class="keyboard__key" data-letter="x">X</button>
-            <button class="keyboard__key" data-letter="c">C</button>
-            <button class="keyboard__key" data-letter="v">V</button>
-            <button class="keyboard__key" data-letter="b">B</button>
-            <button class="keyboard__key" data-letter="n">N</button>
-            <button class="keyboard__key" data-letter="m">M</button>
-          </div>
-        </div>
-        <div class="game-over">
-            <p class="game-over__message">WASTED</p>
-            <button class="resetBtn">Play Again</button>
+          
         </div>
       </div>
     </main>
+    <dialog class="game-over nes-dialog is-rounded">
+        <p class="game-over__message">WASTED</p>
+          <p class="game-over__message--small"></p>
+        <button class="nes-btn is-warning resetBtn">Play Again</button>
+    </dialog>
+    <div class="crt-overlay"></div>
   </body>
 </html>

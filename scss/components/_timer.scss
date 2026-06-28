@@ -1,0 +1,9 @@
+@use "../partials/colors.scss" as c;
+@use "../partials/mixins.scss" as m;
+
+.timer {
+  width: 100%;
+  @include m.tablet {
+    max-width: 580px;
+  }
+}

@@ -1,0 +1,9 @@
+.noir {
+  filter: grayscale(100%) blur(12px);
+  opacity: 80%;
+
+  &--80 {
+    filter: grayscale(80%) blur(0px);
+    // filter: blur(0px);
+  }
+}
