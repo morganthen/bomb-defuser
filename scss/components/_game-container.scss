@@ -1,0 +1,13 @@
+@use "../partials/colors.scss" as c;
+
+.game-container {
+  height: 80%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px;
+  width: 90%;
+}

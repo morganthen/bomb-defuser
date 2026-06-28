@@ -1,12 +1,29 @@
-@use "./scss/components/container.scss";
+@use "./scss/components/game-container.scss";
 @use "./scss/components/word-display.scss";
 @use "./scss/components/game-over.scss";
 @use "./scss/components/keyboard.scss";
 @use "./scss/components/header.scss";
+@use "./scss/components/_background.scss";
+@use "./scss/components/timer.scss";
+@use "./scss/partials/colors.scss" as c;
+@use "./scss/partials/noir.scss";
 
 html,
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: c.$text-primary;
+  font-family: "Press Start 2P", cursive, monospace;
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
 }

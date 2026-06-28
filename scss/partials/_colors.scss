@@ -1,2 +1,14 @@
-$primary: #3498db;
-$bg-light: #f8f9fa;
+$bg-page: #12121a;
+$bg-surface: #ebebeb;
+$bg-surface-dark: #2e1d17;
+
+$text-primary: #e0e0e0;
+$text-dim: #888899;
+
+$brand: #ff6b35; // hazard orange — title, active highlights
+$amber: #ffab00; // warning glow
+
+$correct: #00e676; // electric green — safe, defused
+$wrong: #ff1744; // wire-snip red — danger, wrong guess
+
+$overlay: rgba(0, 0, 0, 0.8);

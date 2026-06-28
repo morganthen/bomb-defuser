@@ -2,17 +2,55 @@
 
 .game-over {
   position: absolute;
+
   inset: 0;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 10;
   &__message {
+    font-size: 2rem;
     text-transform: uppercase;
+    letter-spacing: 6px;
+    animation: pulse-text 1.5s ease-in-out infinite;
+    color: c.$wrong;
   }
 
   &--show {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.resetBtn {
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: transparent;
+  transition:
+    background 0.15s,
+    box-shadow 0.15s;
+
+  &:hover {
+    background: c.$brand;
+    color: #12121a;
+    box-shadow: 0 0 16px rgba(255, 107, 53, 0.4);
+  }
+}
+
+.nes-dialog {
+  border-image: none;
+  min-width: 380px;
+  transform: translateY(-15vh);
+}
+
+@keyframes pulse-text {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
   }
 }
